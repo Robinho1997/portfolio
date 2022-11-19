@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
 
 body {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Russo One', sans-serif;
     background-color: #f3f4f5;
    
 }
@@ -38,6 +38,32 @@ ul {
 a {
     text-decoration: none;
     color: inherit;
+}
+
+
+/* Unterleiste */
+
+#unterleiste {
+    background-color: aquamarine;
+    border-top: solid 1px black;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+    color: rgb(109, 135, 168);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;  
+}
+
+.email, .github {
+    display: flex; 
+    align-items: center;  
+    gap: 10px;  
+}
+
+.icon {
+    width: 30px;
+    padding: 15px;
 }
 
 
@@ -94,6 +120,33 @@ a {
 }
 
 
+/* Skills Part */
+
+#skills {
+    height: 100vh;
+   
+}
+
+#skills h1 {
+    padding-top: 50px;
+    text-align: center;
+    font-size: 50px;
+}
+
+#grid-container-skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 350px;
+    margin-inline: 50px;
+}
+
+.grid-item-skills {
+    padding-top: 25px;
+    text-align: center;
+    font-size: 30px;
+    
+}
+
 
 
 /* Projects Part */
@@ -106,124 +159,149 @@ a {
     margin: 0;
     padding-top: 50px;
     text-align: center;
-    font-size: 30px;
-    color: rgb(109, 135, 168);
+    font-size: 50px;
+    color: black;
     margin-bottom: 100px; 
 }
 
 .grid-container {
-    width: 70%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-auto-rows: 300px;
-    gap: 40px;
-    margin: auto;
+    margin-inline: 50px;
+    gap: 20px;
+   
 }
 
 .grid-item {
-    border-radius: 20px;
-    display: flex;
-    align-items: center;     
-    justify-content: center;    
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat; 
-    box-shadow: 1px 1px 7px;  
-}
-
-
-.project-link {
-    background-color: #f3f4f5; 
-    height: 100px;
-    width: 100px;
-    padding: 20px;
-    border-radius: 100px;
-    cursor: pointer;
-    box-shadow: 1px 1px 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-align: center;
- 
- 
- 
-}
-
-.project-link:hover {
-    transition: 1s;
-    height: 120px;
-    width: 120px;
-    font-size: larger;
-  
-}
-
-
-/* Links */
-
-#links {
-    background-color: aquamarine;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-    color: rgb(109, 135, 168);
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-   
+    padding-top: 10px;
+    border-radius: 20px;
+    
     
 }
 
-.email, .github {
-    display: flex; 
-    align-items: center;  
-    gap: 10px;  
+
+
+
+
+
+
+
+/* Skills background */
+
+.html {
+    background: url(images/skills-logos/HTML5-logo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;
+    background-color: aquamarine;
+    
 }
 
-.icon {
-    width: 30px;
-    padding: 10px;
+.css {
+    background: url(images/skills-logos/css3-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;  
 }
 
+.javascript {
+    background: url(images/skills-logos/javascript-logo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;   
+    background-color: aquamarine; 
+}
 
+.react {
+    background: url(images/skills-logos/react-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;     
+}
 
+.git {
+    background: url(images/skills-logos/Git-Icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px; 
+}
 
+.github-skills {
+    background: url(images/skills-logos/github-icon-skills.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px;  
+    background-color: aquamarine;
+}
+
+.api {
+    background: url(images/skills-logos/api-icon.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px; 
+}
+
+.fun {
+    background-color: aquamarine;
+}
 
 
 /* Background Projects */
 
 .background {
-    background-size: cover;
+   background-size: cover;
+   background-repeat: no-repeat;
    background-position: center;
+   filter: grayscale(100%);
+   border: 15px solid aquamarine;
 }
+
+.background:hover {
+    filter: none;
+}
+
+
 
 .weather {
     background-image: url(images/backgrounds-projects/weather-app.png);   
+    
 }
+
+
 
 .calculator {
     background-image: url(images/backgrounds-projects/calculator.png);
+    
 }
 
 .advice-generator {
     background-image: url(images/backgrounds-projects/advice-generator.png);
+    
 }
 
 .to-do-list {
     background-image: url(images/backgrounds-projects/to-do-list.png);
+    
 }
 
 .tic-tac-toe {
     background-image: url(images/backgrounds-projects/tic-tac-toe.png);
+    
 }
 
 .etch-a-sketch {
     background-image: url(images/backgrounds-projects/etch-a-sketch.png);
+    
 }
 
 .interactive-card {
     background-image: url(images/backgrounds-projects/interactive-card.png);
+    
 }
 
 .landing-page {
     background-image: url(images/backgrounds-projects/landing-page.png);
+    
 }
