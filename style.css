@@ -35,6 +35,11 @@ ul {
     color: lightsteelblue;
 }
 
+li:hover {
+    font-size: large;
+    transition: 1s;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -45,7 +50,7 @@ a {
 
 #unterleiste {
     background-color: aquamarine;
-    border-top: solid 1px black;
+    border-top: solid 0.5px rgb(201, 200, 200);
     position: fixed;
     bottom: 0;
     width: 100vw;
@@ -73,6 +78,25 @@ a {
     height: 100vh;
 }
 
+#horizontal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 150px;
+    flex-wrap: wrap;
+    
+   
+
+}
+
+#portrait {
+    width: 300px;
+    height: 300px;
+    box-shadow: 4.0px 8.0px 8.0px hsl(0deg 0% 0% / 0.38);
+    border-radius: 50%;
+    
+}
+
 #resume-btn {
     color: aquamarine;
     border-color: aquamarine;
@@ -91,10 +115,12 @@ a {
     margin-bottom: 150px;
 }
 
+/*
 #main-content {
     margin: 0 auto;
-    width: 70%;         
+    width: 100%;      
 }
+*/
 
 #main-content p {
     font-size: 25px;
@@ -124,6 +150,7 @@ a {
 
 #skills {
     height: 100vh;
+    
    
 }
 
@@ -140,12 +167,7 @@ a {
     margin-inline: 50px;
 }
 
-.grid-item-skills {
-    padding-top: 25px;
-    text-align: center;
-    font-size: 30px;
-    
-}
+
 
 
 
@@ -166,37 +188,43 @@ a {
 
 .grid-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr ;
     grid-auto-rows: 300px;
     margin-inline: 50px;
-    gap: 20px;
+    gap: 10px;
    
 }
 
 .grid-item {
     text-align: center;
     padding-top: 10px;
-    border-radius: 20px;
-    
-    
+     
+}
+
+.flex-projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.link:hover {
+    padding: inherit;
+    font-size: large;
+    transition: 1s;
+    color: rgb(4, 190, 190);
 }
 
 
 
-
-
-
-
-
 /* Skills background */
-
 .html {
     background: url(images/skills-logos/HTML5-logo.svg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px;
-    background-color: aquamarine;
-    
+    background-color: aquamarine;   
 }
 
 .css {
@@ -248,60 +276,97 @@ a {
 }
 
 
-/* Background Projects */
-
-.background {
-   background-size: cover;
-   background-repeat: no-repeat;
-   background-position: center;
-   filter: grayscale(100%);
-   border: 15px solid aquamarine;
-}
-
-.background:hover {
-    filter: none;
-}
-
-
-
-.weather {
-    background-image: url(images/backgrounds-projects/weather-app.png);   
+@media(max-width: 500px) {
+    /* Main-Content - mediaquery */
+        #main-content {
+            width: 100%;
+            text-align: center;      
+        }
     
+        #navbar {
+            justify-content: center;
+            padding: 10px 60px;
+            margin-bottom: 0px;
+        }
+    
+        #main-content p {
+            
+            display: flex;
+            flex-direction: column;
+        }
+    
+    /* Skills - mediaquery */
+        #skills h1 {
+            margin-top: 220px;
+            padding-top: 0;
+            text-align: center;
+            font-size: 50px;
+        }
+    
+        #grid-container-skills {
+            grid-template-columns: 1fr 1fr ;
+            grid-auto-rows: 200px;
+            margin-inline: 20px;    
+            gap: 10px;
+        }
+    
+        .grid-item-skills {
+            background-color: white;
+        }
+    
+    
+    /* Projects - mediaquery */
+        #projects {
+            margin-top: 200px;   
+        }
+    
+        #projects h1 {
+            margin: 0;
+            padding-top: 150px;
+            text-align: center;
+            font-size: 50px;
+            color: black;
+            margin-bottom: 100px; 
+        }
+    
+        .grid-container {
+            grid-template-columns: 1fr 1fr ;
+            grid-auto-rows: 200px;
+            margin-inline: 20px;    
+            gap: 10px;
+            padding-bottom: 100px;  
+        }
+        
+        .grid-item {
+            text-align: center;
+            border-radius: 20px;   
+        }
+
+
+/* Unterleiste - mediaquery */
+        #unterleiste {
+            background-color: aquamarine;
+            border-top: solid 1px black;
+            position: fixed;
+            width: 100vw;
+            color: rgb(109, 135, 168);
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;  
+        }
+
+        .icon {
+            width: 20px;
+            padding: 5px;
+        }
 }
 
+@media(max-width: 1274px) {
+    #homepage {
+       
+    }
 
-
-.calculator {
-    background-image: url(images/backgrounds-projects/calculator.png);
-    
-}
-
-.advice-generator {
-    background-image: url(images/backgrounds-projects/advice-generator.png);
-    
-}
-
-.to-do-list {
-    background-image: url(images/backgrounds-projects/to-do-list.png);
-    
-}
-
-.tic-tac-toe {
-    background-image: url(images/backgrounds-projects/tic-tac-toe.png);
-    
-}
-
-.etch-a-sketch {
-    background-image: url(images/backgrounds-projects/etch-a-sketch.png);
-    
-}
-
-.interactive-card {
-    background-image: url(images/backgrounds-projects/interactive-card.png);
-    
-}
-
-.landing-page {
-    background-image: url(images/backgrounds-projects/landing-page.png);
-    
+    #main-content {
+        text-align: center;
+    }
 }
